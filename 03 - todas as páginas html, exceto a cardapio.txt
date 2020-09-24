@@ -1,0 +1,59 @@
+1 - substituir
+
+<li class="nav-item">
+	<a class="nav-link" href="./cardapio.html">
+		Cardápio
+	</a>
+</li>
+
+
+- por:
+<li class="nav-item">
+	<a class="nav-link" id="link-cardapio" data-toggle="modal" data-target="#modalWP" href="./cardapio.html" title="Ir para a Página Cardápio">
+		Cardápio
+	</a>
+</li>
+
+
+
+2 - adicionar entre o </footer> e o primeiro arquivo em javascript
+
+<div class="modal fade" id="modalWP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">				<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Por favor, responda a pergunta</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h4>Você possui WhatsApp?</h4>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="wp-sim" onclick="addWp(1)">Tenho!</button>
+				<button type="button" class="btn btn-danger" id="wp-nao" onclick="addWp(0)">Não tenho!</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+3 - adicionar antes de </body>
+
+<script>
+	function addWp(valor) {
+		if (valor == 1) {
+			localStorage.setItem("wp_le", 1)
+		} else if (valor == 0) {
+			localStorage.setItem("wp_le", 0)
+		}
+		window.location.href = "./cardapio.html";
+	}
+</script>
+
+
+
+
+
+

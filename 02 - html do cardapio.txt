@@ -1,0 +1,46 @@
+1 - colocar o css do carrinho no head
+<link rel="stylesheet" href="./assets/css/carrinho.css">
+
+2 - remover todos os itens do cardápio antigo (do html)
+
+
+3 - substituir onde está escrito 
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+		<h3 class="title">Cardápio</h3>
+	</div>
+</div>
+<div class="row">
+</div> <!-- esse fechamento da div da class row -->
+
+- por: 
+
+<div class="row">
+	<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+		<h3>Cardápio</h3>
+	</div>
+</div>
+<div class="row" id="cardapio"></div>
+
+
+4 - adicionar antes de começar os arquivos de Javascript
+
+<div class="modal fade bd-example-modal-lg" id="modalFecharPedido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Fechar pedido</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body" id="modal-body"></div>
+			</div>
+		</div>
+	</div>
+
+
+5 - adicionar após os últimos arquivos javascript (antes de </body>)
+
+<script src="./assets/js/cardapio.js"></script>
+

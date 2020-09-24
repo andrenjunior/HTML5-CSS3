@@ -1,0 +1,4 @@
+colocar o arquivo cardapio.css dentro da pasta assets/css/
+colocar o arquivo cardapio.js dentro da pasta assets/js/
+
+
